@@ -9,9 +9,18 @@ class CalculatorController < ApplicationController
     @num2 = params[:num2].to_i
 
     if params[:commit] == 'Add'
-      @result = @num1 + @num2
+      add
     elsif params[:commit] == 'Sub'
-      @result = @num1 - @num2
+      subtract
     end
+  end
+
+  private
+  def subtract
+    @result = @num1 - @num2
+  end
+
+  def add
+    @result = @num1 + @num2
   end
 end
