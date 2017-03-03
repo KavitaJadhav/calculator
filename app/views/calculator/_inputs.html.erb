@@ -1,0 +1,12 @@
+<div class="row">
+  <%= text_field_tag(:num1, @num1, {placeholder: 'first number', class: 'form-control operand'}) %>
+</div>
+
+<div class="row">
+  <%= text_field_tag(:num2, @num2, {placeholder: 'second number', class: 'form-control operand'}) %>
+</div>
+
+<div class="row">
+  <%= submit_tag 'Add', class: 'btn btn-primary operation' %>
+  <%= submit_tag 'Sub', class: 'btn btn-primary operation' %>
+</div>

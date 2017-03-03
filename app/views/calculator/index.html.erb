@@ -1,13 +1,12 @@
-<!--<form accept-charset="UTF-8" action="/calculate" method="post">-->
-<!--<input name="utf8" type="hidden" value="&#x2713;" />-->
-<!--<input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />-->
-<!--Form contents-->
-<!--</form>-->
+<div class="container">
 
+  <%= form_tag(calculate_path, :method => 'get', class: :calculator) do %>
+      <div class="row">
+        <div class="offset-md-3">
+          <h1>Calculator</h1>
 
-<%= form_tag(calculate_path, :method => 'get') do %>
-    <div><%= text_field_tag(:num1, @num1) %></div>
-    <div><%= text_field_tag(:num2, @num2) %></div>
-    <div><%= submit_tag 'Add' %></div>
-    <div><%= submit_tag 'Sub' %></div>
-<% end -%>
+          <%= render :partial => 'inputs' %>
+        </div>
+      </div>
+  <% end -%>
+</div>
